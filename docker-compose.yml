@@ -2,7 +2,17 @@ version: '2'
 services:
   database:
     image: nginx
-    container_name: AdisiTast
+    container_name: Adisi-con1
     ports:
       - 8080:80
-    
+    volumes:
+      - /home/ubuntu/Adisi-storage:/usr/share/nginx/html
+  frontend: 
+    image: nginx
+    container_name: Adisi-con2
+    ports:
+      - 4000:80
+    volumes:
+      - new-volumes:/usr/share/nginx/html
+volumes:
+  new-volumes: {}
