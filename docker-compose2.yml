@@ -9,7 +9,7 @@ services:
       MYSQL_USER: wp_user
       MYSQL_PASSWORD: 12345
     volumes:
-      - mysql:/var/lip/mysql
+      - mysql:/var/lib/mysql
   wordpress:
     depends_on:
       - mysql_database
